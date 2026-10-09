@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBS Domain</title>
+    <style>
+        *{ padding:0; margin:0; box-sizing:border-box; }
+        body{ font-family: Arial, sans-serif; background:#fffbe6; color:#2b2b2b; }
+
+        .top{
+            background: linear-gradient(135deg, #064e3b, #0b6b4f);
+            color: white;
+            text-align: center;
+            padding: 70px 20px 60px;
+        }
+        .top .icon{ font-size: 4rem; display:block; }
+        .top h1{ font-size: 2.4rem; margin-top: 10px; }
+        .top p{ color:#fde68a; margin-top: 10px; letter-spacing: 2px; }
+
+        .content{ max-width: 850px; margin: 40px auto; padding: 0 20px; }
+        .content h2{ color:#064e3b; margin: 30px 0 15px; }
+        .content p{ line-height: 1.8; font-size: 1.1rem; }
+
+        ul{ list-style:none; }
+        li{
+            background:white;
+            padding:14px 18px;
+            margin-bottom:12px;
+            border-left:5px solid #e6a100;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:12px 28px;
+            background:#064e3b;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+        }
+        .btn:hover{ background:#e6a100; color:#3b2f05; }
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        <span class="icon" id="icon"></span>
+        <h1 id="title"></h1>
+        <p>CHARACTER BUILDING SOCIETY</p>
+    </div>
+
+    <div class="content">
+        <h2>About this Domain</h2>
+        <p id="about"></p>
+
+        <h2>What We Do?</h2>
+        <ul id="tasks"></ul>
+
+        <a href="index.html#domains" class="btn">← Back to Domains</a>
+    </div>
+
+    <script>
+        const domains = {
+            events: {
+                icon: "🎪", title: "Events & Management",
+                about: "pending",
+                tasks: ["Providing grooming environment to students", "Organize events full of fun and useful information ", "so on"]
+            },
+            academic: {
+                icon: "🎓", title: "Academic & Welfare",
+                about: "pending :",
+                tasks: ["Helps students in their academic journey", "Providing them a stress-free and calm environment", "Informing them about upcoming opportunities"]
+            },
+            media: {
+                icon: "📸", title: "Media",
+                about: "also pending",
+                tasks: [".....", ".........", "....."]
+            },
+            finance: {
+                icon: "💰", title: "Finance",
+                about: "pending",
+                tasks: ["...", ".....", "..........."]
+            },
+            record: {
+                icon: "📋", title: "Record",
+                about: "pending",
+                tasks: [",...", ".....", ".........."]
+            },
+            islamic: {
+                icon: "🕌", title: "Islamic",
+                about: "Arrange Islamic events",
+                tasks: ["....", ".....", "........."]
+            },
+            volunteer: {
+                icon: "🤝", title: "Volunteer Management",
+                about: "pending",
+                tasks: ["......", "....", "......"]
+            },
+            electronics: {
+                icon: "🔌", title: "Inter Dept ",
+                about: "pending",
+                tasks: ["..........", "....", ".........."]
+            }
+        };
+
+        const key = new URLSearchParams(window.location.search).get("d");
+        const data = domains[key];
+
+        if (data) {
+            document.title = data.title + " | CBS";
+            document.getElementById("icon").textContent = data.icon;
+            document.getElementById("title").textContent = data.title;
+            document.getElementById("about").textContent = data.about;
+            data.tasks.forEach(t => {
+                const li = document.createElement("li");
+                li.textContent = t;
+                document.getElementById("tasks").appendChild(li);
+            });
+        } else {
+            document.getElementById("title").textContent = "Domain not found";
+        }
+    </script>
+</body>
+</html>

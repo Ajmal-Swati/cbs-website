@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBS WEBSITE</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .hero{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+           background: linear-gradient(135deg, #ffd23f, #ffbf00, #e6a100);
+        }
+        .uet-logo{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 100px;
+      mix-blend-mode: multiply;
+}
+@media (max-width: 600px){
+    .uet-logo{
+        height: 60px;
+        top: 10px;
+        right: 15px;
+    }
+}
+.logo{
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+    clip-path: circle(48%);  
+}
+        h1{
+            color: black;
+            font-size: 3.1rem;
+            letter-spacing: 4px;
+            margin-top: 25px;
+            animation: fade 2s ease;
+        }
+        p{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            color: black;
+            animation: fade 2.5s ease;
+        }
+        @keyframes fade{
+            from{ opacity: 0; transform: translateY(30px); }
+            to{ opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px){
+            .logo{ height: 250px; }
+            h1{ font-size: 1.8rem; }
+            p{ font-size: 1.1rem; }
+        }
+        /* page two  */
+        #about{
+    padding: 70px 20px;
+    background: #faf4d4;
+    color: #2b2b2b;
+}
+.about-box{
+    max-width: 950px;
+    margin: auto;
+}
+#about h2{
+    text-align: center;
+    font-size: 2.2rem;
+    color: #064e3b;
+    margin-bottom: 22px;
+}
+#about p{
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+#about h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e6a100;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+#about h2 + p{
+    position: relative;
+    left: 25px;   /* ab right ki taraf jayega */
+}
+#about p{
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+#about h3{
+    color: #064e3b;
+    margin: 25px 0 15px;
+}
+#about ul{
+    list-style: none;
+}
+#about li{
+    background: white;
+    padding: 14px 18px 14px 45px;
+    margin-bottom: 12px;
+    border-left: 5px solid #e6a100;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+    line-height: 1.6;
+}
+#about li::before{
+    content: "✔";
+    color: #0b6b4f;
+    position: absolute;
+    left: 15px;
+}
+.final{
+    background: #064e3b;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
+/* Domains decoration  */
+#domains{
+    padding: 80px 20px;
+    background: #23a180;
+    text-align: center;
+}
+#domains h2{
+    color: white;
+    font-size: 2.2rem;
+}
+#domains h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+     margin: 10px auto 0;
+    border-radius: 5px;
+}
+.domains-intro{
+    color: #fde68a;
+    margin: 20px 0 45px;
+    font-size: 1.1rem;
+}
+.domain-grid{
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+.domain-card{
+display: block;
+    text-decoration: none;
+    background: white;
+    padding: 35px 20px;
+    border-radius: 14px;
+    border-top: 5px solid #ffbf00;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.domain-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+.domain-card .num{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-weight: bold;
+    color: #e6a100;
+}
+.domain-card .icon{
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 15px;
+}
+.domain-card h3{
+    color: #064e3b;
+    font-size: 1.15rem;
+}
+
+/* for mobile compatibility  */
+@media (max-width: 600px){
+    #about h2{ font-size: 1.7rect; }
+}
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <img src="uet logo.jpeg" alt="logo" class="uet-logo">
+        <img src="logo.jpeg" alt="logo" class="logo">
+        
+        <h1>CHARACTER BUILDING SOCIETY</h1>
+        <p>GOOD HUMANS, BETTER MUSLIM</p>
+    </header>
+    <main>
+        
+        <section id="about">
+        <div class="about-box">
+            <h2>MISSION OF CBS</h2>
+
+            <p>The mission of the Character Building Society (CBS) is to develop responsible, ethical, and service-oriented individuals by promoting character, leadership, integrity, discipline, compassion, and social responsibility among students.</p>
+
+            <h3>CBS aims to provide students with opportunities to:</h3>
+            <ul>
+                <li>Develop strong moral and ethical values.</li>
+                <li>Promote Khidmat-e-Khalq (service to humanity) and a spirit of compassion.</li>
+                <li>Encourage Amr bil Ma'ruf wa Nahi 'anil Munkar through positive and respectful means.</li>
+                <li>Develop leadership, communication, teamwork, and decision-making skills.</li>
+                <li>Support students in achieving their academic and personal goals.</li>
+                <li>Encourage active participation in community service and constructive university activities.</li>
+                <li>Build a culture of mutual respect, responsibility, discipline, and unity.</li>
+                <li>Prepare students to become responsible citizens and contribute positively to society and the nation.</li>
+            </ul>
+
+            <p class="final">Our mission is to build not only successful students, but individuals of strong character who lead with integrity, serve humanity, and create a positive impact wherever they go.</p>
+        </div>
+    </section>
+    <!-- DOMIANS SECTION  -->
+    <section id="domains">
+    <h2>CBS Domains</h2>
+    <p class="domains-intro">Every student can participate in any domain.</p>
+
+    <div class="domain-grid">
+        <a href="domain.html?d=events" target="_blank" class="domain-card"><span class="num">01</span><span class="icon">🎪</span><h3>Events &amp; Management</h3></a>
+<a href="domain.html?d=academic" target="_blank" class="domain-card"><span class="num">02</span><span class="icon">🎓</span><h3>Academic &amp; Welfare</h3></a>
+<a href="domain.html?d=media" target="_blank" class="domain-card"><span class="num">03</span><span class="icon">📸</span><h3>Media</h3></a>
+<a href="domain.html?d=finance" target="_blank" class="domain-card"><span class="num">04</span><span class="icon">💰</span><h3>Finance</h3></a>
+<a href="domain.html?d=record" target="_blank" class="domain-card"><span class="num">05</span><span class="icon">📋</span><h3>Record</h3></a>
+<a href="domain.html?d=islamic" target="_blank" class="domain-card"><span class="num">06</span><span class="icon">🕌</span><h3>Islamic</h3></a>
+<a href="domain.html?d=volunteer" target="_blank" class="domain-card"><span class="num">07</span><span class="icon">🤝</span><h3>Volunteer Management</h3></a>
+<a href="domain.html?d=electronics" target="_blank" class="domain-card"><span class="num">08</span><span class="icon">🔌</span><h3>Inter Dept Electronics</h3></a>
+    </div>
+</section>
+
+    </main>
+</body>
+</html>
