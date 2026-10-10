@@ -292,6 +292,66 @@ display: block;
 }
 .member-card.president h3{ color: white; }
 .member-card.president p{ color: #ffd23f; }
+/* head of domains decoration  */
+#heads{
+    padding: 80px 20px;
+    background: #f1f6f3;
+    text-align: center;
+}
+#heads h2{
+    color: #064e3b;
+    font-size: 2.2rem;
+}
+#heads h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e6a100;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+.heads-intro{
+    color: #4b5563;
+    margin: 20px 0 40px;
+    font-size: 1.1rem;
+}
+.table-wrap{
+    max-width: 850px;
+    margin: auto;
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.heads-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 480px;
+}
+.heads-table th{
+    background: #064e3b;
+    color: #ffd23f;
+    padding: 16px;
+    letter-spacing: 1px;
+}
+.heads-table td{
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #2b2b2b;
+}
+.heads-table td.dept{
+    background: #fffbe6;
+    color: #064e3b;
+    font-weight: bold;
+    border-right: 4px solid #e6a100;
+}
+.heads-table tbody{
+    border-bottom: 3px solid #e6a100;
+}
+.heads-table tbody tr:hover td:not(.dept){
+    background: #fff8d6;
+}
     </style>
 </head>
 <body>
@@ -385,6 +445,71 @@ display: block;
                 <p>Finance Head</p>
             </div>
         </div>
+    </div>
+</section>
+<!-- Heads of Domains -->
+ <section id="heads">
+    <h2>HEADS OF DOMAINS</h2>
+    <p class="heads-intro">Meet the heads representing every department</p>
+
+    <div class="table-wrap">
+        <table class="heads-table">
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Head Name</th>
+                    <th>Semester</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="dept" rowspan="2">💻 Software Engineering</td>
+                    <td>Name Here</td>
+                    <td>Semester</td>
+                </tr>
+                <tr>
+                    <td>Name Here</td>
+                    <td>Semester</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td class="dept" rowspan="2">🖥️ Computer Science</td>
+                    <td>Name Here</td>
+                    <td>Semester</td>
+                </tr>
+                <tr>
+                    <td>Name Here</td>
+                    <td>Semester</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td class="dept" rowspan="2">📐 Architecture</td>
+                    <td> Name Here</td>
+                    <td>Semester</td>
+                </tr>
+                <tr>
+                    <td>Name Here</td>
+                    <td>Semester</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td class="dept" rowspan="2">⚡ Electronics</td>
+                    <td> Name Here</td>
+                    <td>Semester</td>
+                </tr>
+                <tr>
+                    <td> Name Here</td>
+                    <td> Semester</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
