@@ -352,6 +352,105 @@ display: block;
 .heads-table tbody tr:hover td:not(.dept){
     background: #fff8d6;
 }
+
+/* FORM DECORATION HERE  */
+#ideas{
+    padding: 80px 20px;
+    background: #064e3b;
+    text-align: center;
+}
+#ideas h2{
+    color: white;
+    font-size: 2.2rem;
+}
+#ideas h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ffbf00;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+.ideas-intro{
+    color: #fde68a;
+    margin: 20px 0 40px;
+    font-size: 1.1rem;
+}
+.idea-box{
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 35px 30px;
+    border-radius: 16px;
+    border-top: 5px solid #ffbf00;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+    text-align: left;
+}
+#ideas label{
+    display: block;
+    font-weight: bold;
+    color: #064e3b;
+    margin: 18px 0 6px;
+}
+#ideas input,
+#ideas select,
+#ideas textarea{
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fafafa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+#ideas input:focus,
+#ideas select:focus,
+#ideas textarea:focus{
+    outline: none;
+    border-color: #e6a100;
+    box-shadow: 0 0 0 3px rgba(230,161,0,0.25);
+    background: white;
+}
+#ideas textarea{
+    resize: vertical;
+    min-height: 130px;
+}
+.idea-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+#ideas button{
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    background: #064e3b;
+    color: #ffd23f;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+#ideas button:hover{
+    background: #e6a100;
+    color: #3b2f05;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px){
+    .idea-row{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .idea-box{
+        padding: 25px 20px;
+    }
+}
     </style>
 </head>
 <body>
@@ -510,6 +609,51 @@ display: block;
                 </tr>
             </tbody>
         </table>
+    </div>
+</section>
+<section id="ideas">
+    <h2>Share Your Idea</h2>
+    <p class="ideas-intro">Have an idea for CBS? We would love to hear it.</p>
+
+    <div class="idea-box">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New idea for CBS">
+
+            <label for="idea-name">Name</label>
+            <input type="text" name="name" id="idea-name" placeholder="Your full name" required>
+
+            <label for="idea-dept">Department</label>
+            <input type="text" name="department" id="idea-dept" placeholder="e.g. Software Engineering" required>
+
+            <div class="idea-row">
+                <div>
+                    <label for="idea-reg">Registration No</label>
+                    <input type="text" name="regno" id="idea-reg" placeholder="Your reg number" required>
+                </div>
+                <div>
+                    <label for="idea-sem">Semester</label>
+                    <input type="number" name="semester" id="idea-sem" min="1" max="8" placeholder="1 - 8" required>
+                </div>
+            </div>
+
+            <label for="idea-domain">Domain</label>
+            <select name="domain" id="idea-domain" required>
+                <option value="">Select a domain</option>
+                <option>Events &amp; Management</option>
+                <option>Academic &amp; Welfare</option>
+                <option>Media</option>
+                <option>Finance</option>
+                <option>Record</option>
+                <option>Islamic</option>
+                <option>Volunteer Management</option>
+                <option>Inter Dept</option>
+            </select>
+
+            <label for="idea-text">Your Idea</label>
+            <textarea name="idea" id="idea-text" placeholder="Write your idea here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </section>
 
