@@ -205,12 +205,93 @@ display: block;
 @media (max-width: 600px){
     #about h2{ font-size: 1.7rect; }
 }
+/* Cabinet decoration */
+#cabinet{
+    padding: 80px 20px;
+    background: #fffbe6;
+    text-align: center;
+}
+#cabinet h2{
+    color: #064e3b;
+    font-size: 2.2rem;
+}
+#cabinet h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e6a100;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+.cabinet-intro{
+    color: #5a4a10;
+    margin: 20px 0 10px;
+    font-size: 1.1rem;
+}
+.year-badge{
+    display: inline-block;
+    margin: 45px 0 30px;
+    padding: 10px 32px;
+    background: #064e3b;
+    color: #ffd23f;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 30px;
+}
+.cabinet-grid{
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+.member-card{
+    background: white;
+    padding: 35px 20px;
+    border-radius: 16px;
+    border-bottom: 5px solid #e6a100;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.member-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd23f, #e6a100);
+    color: #064e3b;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.member-card h3{
+    color: #064e3b;
+    font-size: 1.15rem;
+}
+.member-card p{
+    color: #8a5a00;
+    margin-top: 6px;
+    font-weight: bold;
+}
+.member-card.president{
+    background: #064e3b;
+    border-bottom-color: #ffd23f;
+}
+.member-card.president h3{ color: white; }
+.member-card.president p{ color: #ffd23f; }
     </style>
 </head>
 <body>
     <header class="hero">
-        <img src="uet logo.jpeg" alt="logo" class="uet-logo">
-        <img src="logo.jpeg" alt="logo" class="logo">
+        <img src="images/uet logo.jpeg" alt="logo" class="uet-logo">
+        <img src="images/logo.jpeg" alt="logo" class="logo">
         
         <h1>CHARACTER BUILDING SOCIETY</h1>
         <p>GOOD HUMANS, BETTER MUSLIM</p>
@@ -252,6 +333,52 @@ display: block;
 <a href="domain.html?d=islamic" target="_blank" class="domain-card"><span class="num">06</span><span class="icon">🕌</span><h3>Islamic</h3></a>
 <a href="domain.html?d=volunteer" target="_blank" class="domain-card"><span class="num">07</span><span class="icon">🤝</span><h3>Volunteer Management</h3></a>
 <a href="domain.html?d=electronics" target="_blank" class="domain-card"><span class="num">08</span><span class="icon">🔌</span><h3>Inter Dept </h3></a>
+    </div>
+</section>
+<section id="cabinet">
+    <h2>OUR CABINET</h2>
+    <p class="cabinet-intro">The team behind Character Building Society</p>
+
+    <div class="year-block">
+        <span class="year-badge">2024 – 2026</span>
+        <div class="cabinet-grid">
+            <div class="member-card">
+                <div class="avatar">GS</div>
+                <h3>Dr. Ghousia Saeed</h3>
+                <p>Faculty Head</p>
+            </div>
+            <div class="member-card president">
+                <div class="avatar">H</div>
+                <h3>Huzaifa</h3>
+                <p>President</p>
+            </div>
+            <div class="member-card">
+                <div class="avatar">AB</div>
+                <h3>Abu Bakar Afridi</h3>
+                <p>Finance Head</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="year-block">
+        <span class="year-badge">2026 – 2027</span>
+        <div class="cabinet-grid">
+            <div class="member-card">
+                <div class="avatar">?</div>
+                <h3>Dr. Ghousia Saeed</h3>
+                <p>Faculty Head</p>
+            </div>
+            <div class="member-card president">
+                <div class="avatar">SJ</div>
+                <h3>Syed Shah Jalal Ahmad</h3>
+                <p>President</p>
+            </div>
+            <div class="member-card">
+                <div class="avatar">?</div>
+                <h3>Abu Bakar Afridi</h3>
+                <p>Finance Head</p>
+            </div>
+        </div>
     </div>
 </section>
 
