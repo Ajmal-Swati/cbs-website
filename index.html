@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBS WEBSITE</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             font-family: Arial, sans-serif;
         }
-        .hero{
+
+        .hero {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -22,36 +25,41 @@
             text-align: center;
             padding: 20px;
             color: white;
-           background: linear-gradient(135deg, #ffd23f, #ffbf00, #e6a100);
+            background: linear-gradient(135deg, #ffd23f, #ffbf00, #e6a100);
         }
-        .uet-logo{
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    height: 100px;
-      mix-blend-mode: multiply;
-}
-@media (max-width: 600px){
-    .uet-logo{
-        height: 60px;
-        top: 10px;
-        right: 15px;
-    }
-}
-.logo{
-    height: 400px;
-    max-width: 100%;
-    object-fit: contain;
-    clip-path: circle(48%);  
-}
-        h1{
+
+        .uet-logo {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            height: 100px;
+            mix-blend-mode: multiply;
+        }
+
+        @media (max-width: 600px) {
+            .uet-logo {
+                height: 60px;
+                top: 10px;
+                right: 15px;
+            }
+        }
+
+        .logo {
+            height: 400px;
+            max-width: 100%;
+            object-fit: contain;
+            clip-path: circle(48%);
+        }
+
+        h1 {
             color: black;
             font-size: 3.1rem;
             letter-spacing: 4px;
             margin-top: 25px;
             animation: fade 4s ease;
         }
-        p{
+
+        p {
             font-family: 'Times New Roman', Times, serif;
             font-size: 1.5rem;
             letter-spacing: 3px;
@@ -59,38 +67,494 @@
             color: black;
             animation: fade 2.5s ease;
         }
-        @keyframes fade{
-            from{ opacity: 0; transform: translateY(30px); }
-            to{ opacity: 1; transform: translateY(0); }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        @media (max-width: 600px){
-            .logo{ height: 250px; }
-            h1{ font-size: 1.8rem; }
-            p{ font-size: 1.1rem; }
+
+        @media (max-width: 600px) {
+            .logo {
+                height: 250px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
         }
+
         /* page two  */
-        #about{
-    padding: 70px 20px;
-    background: #faf4d4;
-    color: #2b2b2b;
-}
-.about-box{
-    max-width: 950px;
-    margin: auto;
-}
-#about h2{
+        #about {
+            padding: 70px 20px;
+            background: #faf4d4;
+            color: #2b2b2b;
+        }
+
+        .about-box {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #064e3b;
+            margin-bottom: 22px;
+        }
+
+        #about p {
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        #about h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #e6a100;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        #about h2+p {
+            position: relative;
+            left: 25px;
+            /* ab right ki taraf jayega */
+        }
+
+        #about p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        #about h3 {
+            color: #064e3b;
+            margin: 25px 0 15px;
+        }
+
+        #about ul {
+            list-style: none;
+        }
+
+        #about li {
+            background: white;
+            padding: 14px 18px 14px 45px;
+            margin-bottom: 12px;
+            border-left: 5px solid #e6a100;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: relative;
+            line-height: 1.6;
+        }
+
+        #about li::before {
+            content: "✔";
+            color: #0b6b4f;
+            position: absolute;
+            left: 15px;
+        }
+
+        .final {
+            background: #064e3b;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        /* Domains decoration  */
+        #domains {
+            padding: 80px 20px;
+            background: #23a180;
+            text-align: center;
+        }
+
+        #domains h2 {
+            color: white;
+            font-size: 2.2rem;
+        }
+
+        #domains h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .domains-intro {
+            color: #fde68a;
+            margin: 20px 0 45px;
+            font-size: 1.1rem;
+        }
+
+        .domain-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .domain-card {
+            display: block;
+            text-decoration: none;
+            background: white;
+            padding: 35px 20px;
+            border-radius: 14px;
+            border-top: 5px solid #ffbf00;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .domain-card .num {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-weight: bold;
+            color: #e6a100;
+        }
+
+        .domain-card .icon {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .domain-card h3 {
+            color: #064e3b;
+            font-size: 1.15rem;
+        }
+
+        /* for mobile compatibility  */
+        @media (max-width: 600px) {
+            #about h2 {
+                font-size: 1.7rect;
+            }
+        }
+
+        /* Cabinet decoration */
+        #cabinet {
+            padding: 80px 20px;
+            background: #fffbe6;
+            text-align: center;
+        }
+
+        #cabinet h2 {
+            color: #064e3b;
+            font-size: 2.2rem;
+        }
+
+        #cabinet h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #e6a100;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .cabinet-intro {
+            color: #5a4a10;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .year-badge {
+            display: inline-block;
+            margin: 45px 0 30px;
+            padding: 10px 32px;
+            background: #064e3b;
+            color: #ffd23f;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border-radius: 30px;
+        }
+
+        .cabinet-grid {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .member-card {
+            background: white;
+            padding: 35px 20px;
+            border-radius: 16px;
+            border-bottom: 5px solid #e6a100;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd23f, #e6a100);
+            color: #064e3b;
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-card h3 {
+            color: #064e3b;
+            font-size: 1.15rem;
+        }
+
+        .member-card p {
+            color: #8a5a00;
+            margin-top: 6px;
+            font-weight: bold;
+        }
+
+        .member-card.president {
+            background: #064e3b;
+            border-bottom-color: #ffd23f;
+        }
+
+        .member-card.president h3 {
+            color: white;
+        }
+
+        .member-card.president p {
+            color: #ffd23f;
+        }
+
+        /* head of domains decoration  */
+        #heads {
+            padding: 80px 20px;
+            background: #f1f6f3;
+            text-align: center;
+        }
+
+        #heads h2 {
+            color: #064e3b;
+            font-size: 2.2rem;
+        }
+
+        #heads h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #e6a100;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .heads-intro {
+            color: #4b5563;
+            margin: 20px 0 40px;
+            font-size: 1.1rem;
+        }
+
+        .table-wrap {
+            max-width: 850px;
+            margin: auto;
+            overflow-x: auto;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .heads-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 480px;
+        }
+
+        .heads-table th {
+            background: #064e3b;
+            color: #ffd23f;
+            padding: 16px;
+            letter-spacing: 1px;
+        }
+
+        .heads-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #2b2b2b;
+        }
+
+        .heads-table td.dept {
+            background: #fffbe6;
+            color: #064e3b;
+            font-weight: bold;
+            border-right: 4px solid #e6a100;
+        }
+
+        .heads-table tbody {
+            border-bottom: 3px solid #e6a100;
+        }
+
+        .heads-table tbody tr:hover td:not(.dept) {
+            background: #fff8d6;
+        }
+
+        /* FORM DECORATION HERE  */
+        #ideas {
+            padding: 80px 20px;
+            background: #064e3b;
+            text-align: center;
+        }
+
+        #ideas h2 {
+            color: white;
+            font-size: 2.2rem;
+        }
+
+        #ideas h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ffbf00;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .ideas-intro {
+            color: #fde68a;
+            margin: 20px 0 40px;
+            font-size: 1.1rem;
+        }
+
+        .idea-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 35px 30px;
+            border-radius: 16px;
+            border-top: 5px solid #ffbf00;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        #ideas label {
+            display: block;
+            font-weight: bold;
+            color: #064e3b;
+            margin: 18px 0 6px;
+        }
+
+        #ideas input,
+        #ideas select,
+        #ideas textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #fafafa;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        #ideas input:focus,
+        #ideas select:focus,
+        #ideas textarea:focus {
+            outline: none;
+            border-color: #e6a100;
+            box-shadow: 0 0 0 3px rgba(230, 161, 0, 0.25);
+            background: white;
+        }
+
+        #ideas textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .idea-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        #ideas button {
+            width: 100%;
+            margin-top: 28px;
+            padding: 14px;
+            background: #064e3b;
+            color: #ffd23f;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #ideas button:hover {
+            background: #e6a100;
+            color: #3b2f05;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .idea-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .idea-box {
+                padding: 25px 20px;
+            }
+        }
+
+        /* previous activities decoration  */
+        #activities{
+    padding: 80px 20px;
+    background: #fffbe6;
     text-align: center;
-    font-size: 2.2rem;
+}
+#activities h2{
     color: #064e3b;
-    margin-bottom: 22px;
+    font-size: 2.2rem;
 }
-#about p{
-    text-align: center;
-    line-height: 1.8;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-#about h2::after{
+#activities h2::after{
     content: "";
     display: block;
     width: 80px;
@@ -99,564 +563,364 @@
     margin: 10px auto 0;
     border-radius: 5px;
 }
-#about h2 + p{
-    position: relative;
-    left: 25px;   /* ab right ki taraf jayega */
-}
-#about p{
-    line-height: 1.8;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-#about h3{
-    color: #064e3b;
-    margin: 25px 0 15px;
-}
-#about ul{
-    list-style: none;
-}
-#about li{
-    background: white;
-    padding: 14px 18px 14px 45px;
-    margin-bottom: 12px;
-    border-left: 5px solid #e6a100;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: relative;
-    line-height: 1.6;
-}
-#about li::before{
-    content: "✔";
-    color: #0b6b4f;
-    position: absolute;
-    left: 15px;
-}
-.final{
-    background: #064e3b;
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 30px;
-}
-/* Domains decoration  */
-#domains{
-    padding: 80px 20px;
-    background: #23a180;
-    text-align: center;
-}
-#domains h2{
-    color: white;
-    font-size: 2.2rem;
-}
-#domains h2::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-     margin: 10px auto 0;
-    border-radius: 5px;
-}
-.domains-intro{
-    color: #fde68a;
+.act-intro{
+    color: #5a4a10;
     margin: 20px 0 45px;
     font-size: 1.1rem;
 }
-.domain-grid{
+.act-grid{
     max-width: 1100px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
-.domain-card{
-display: block;
-    text-decoration: none;
+.act-card{
+    flex: 0 1 330px;
     background: white;
-    padding: 35px 20px;
-    border-radius: 14px;
-    border-top: 5px solid #ffbf00;
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.domain-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-.domain-card .num{
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    font-weight: bold;
-    color: #e6a100;
-}
-.domain-card .icon{
-    font-size: 2.8rem;
-    display: block;
-    margin-bottom: 15px;
-}
-.domain-card h3{
-    color: #064e3b;
-    font-size: 1.15rem;
-}
-
-/* for mobile compatibility  */
-@media (max-width: 600px){
-    #about h2{ font-size: 1.7rect; }
-}
-/* Cabinet decoration */
-#cabinet{
-    padding: 80px 20px;
-    background: #fffbe6;
-    text-align: center;
-}
-#cabinet h2{
-    color: #064e3b;
-    font-size: 2.2rem;
-}
-#cabinet h2::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #e6a100;
-    margin: 10px auto 0;
-    border-radius: 5px;
-}
-.cabinet-intro{
-    color: #5a4a10;
-    margin: 20px 0 10px;
-    font-size: 1.1rem;
-}
-.year-badge{
-    display: inline-block;
-    margin: 45px 0 30px;
-    padding: 10px 32px;
-    background: #064e3b;
-    color: #ffd23f;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 30px;
-}
-.cabinet-grid{
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-}
-.member-card{
-    background: white;
-    padding: 35px 20px;
     border-radius: 16px;
-    border-bottom: 5px solid #e6a100;
+    overflow: hidden;
+    text-align: left;
     box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    border-bottom: 5px solid #e6a100;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.member-card:hover{
+.act-card:hover{
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
-.avatar img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.avatar{
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ffd23f, #e6a100);
-    color: #064e3b;
-    font-size: 1.8rem;
-    font-weight: bold;
+.act-img{
+    height: 180px;
+    background: linear-gradient(135deg, #064e3b, #0b6b4f);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 4rem;
 }
-.member-card h3{
-    color: #064e3b;
-    font-size: 1.15rem;
+.act-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.member-card p{
+.act-body{
+    padding: 22px 22px 26px;
+}
+.act-date{
+    display: inline-block;
+    background: #fff3b0;
     color: #8a5a00;
-    margin-top: 6px;
+    font-size: 0.85rem;
     font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
 }
-.member-card.president{
-    background: #064e3b;
-    border-bottom-color: #ffd23f;
-}
-.member-card.president h3{ color: white; }
-.member-card.president p{ color: #ffd23f; }
-/* head of domains decoration  */
-#heads{
-    padding: 80px 20px;
-    background: #f1f6f3;
-    text-align: center;
-}
-#heads h2{
+.act-body h3{
     color: #064e3b;
-    font-size: 2.2rem;
+    font-size: 1.2rem;
+    margin: 12px 0 8px;
 }
-#heads h2::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #e6a100;
-    margin: 10px auto 0;
-    border-radius: 5px;
-}
-.heads-intro{
-    color: #4b5563;
-    margin: 20px 0 40px;
-    font-size: 1.1rem;
-}
-.table-wrap{
-    max-width: 850px;
-    margin: auto;
-    overflow-x: auto;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-.heads-table{
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    min-width: 480px;
-}
-.heads-table th{
-    background: #064e3b;
-    color: #ffd23f;
-    padding: 16px;
-    letter-spacing: 1px;
-}
-.heads-table td{
-    padding: 16px;
-    border-bottom: 1px solid #e5e7eb;
-    color: #2b2b2b;
-}
-.heads-table td.dept{
-    background: #fffbe6;
-    color: #064e3b;
-    font-weight: bold;
-    border-right: 4px solid #e6a100;
-}
-.heads-table tbody{
-    border-bottom: 3px solid #e6a100;
-}
-.heads-table tbody tr:hover td:not(.dept){
-    background: #fff8d6;
-}
-
-/* FORM DECORATION HERE  */
-#ideas{
-    padding: 80px 20px;
-    background: #064e3b;
-    text-align: center;
-}
-#ideas h2{
-    color: white;
-    font-size: 2.2rem;
-}
-#ideas h2::after{
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #ffbf00;
-    margin: 10px auto 0;
-    border-radius: 5px;
-}
-.ideas-intro{
-    color: #fde68a;
-    margin: 20px 0 40px;
-    font-size: 1.1rem;
-}
-.idea-box{
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 35px 30px;
-    border-radius: 16px;
-    border-top: 5px solid #ffbf00;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.3);
-    text-align: left;
-}
-#ideas label{
-    display: block;
-    font-weight: bold;
-    color: #064e3b;
-    margin: 18px 0 6px;
-}
-#ideas input,
-#ideas select,
-#ideas textarea{
-    width: 100%;
-    padding: 12px 14px;
-    border: 2px solid #e5e7eb;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    background: #fafafa;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-#ideas input:focus,
-#ideas select:focus,
-#ideas textarea:focus{
-    outline: none;
-    border-color: #e6a100;
-    box-shadow: 0 0 0 3px rgba(230,161,0,0.25);
-    background: white;
-}
-#ideas textarea{
-    resize: vertical;
-    min-height: 130px;
-}
-.idea-row{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-#ideas button{
-    width: 100%;
-    margin-top: 28px;
-    padding: 14px;
-    background: #064e3b;
-    color: #ffd23f;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.05rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-#ideas button:hover{
-    background: #e6a100;
-    color: #3b2f05;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 600px){
-    .idea-row{
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    .idea-box{
-        padding: 25px 20px;
-    }
+.act-body p{
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.98rem;
 }
     </style>
 </head>
+
 <body>
     <header class="hero">
         <img src="images/uet logo.jpeg" alt="logo" class="uet-logo">
         <img src="images/logo.jpeg" alt="logo" class="logo">
-        
+
         <h1>CHARACTER BUILDING SOCIETY</h1>
         <p>GOOD HUMANS, BETTER MUSLIM</p>
     </header>
     <main>
-        
+
         <section id="about">
-        <div class="about-box">
-            <h2>MISSION OF CBS</h2>
+            <div class="about-box">
+                <h2>MISSION OF CBS</h2>
 
-            <p>The mission of the Character Building Society (CBS) is to develop responsible, ethical, and service-oriented individuals by promoting character, leadership, integrity, discipline, compassion, and social responsibility among students.</p>
+                <p>The mission of the Character Building Society (CBS) is to develop responsible, ethical, and
+                    service-oriented individuals by promoting character, leadership, integrity, discipline, compassion,
+                    and social responsibility among students.</p>
 
-            <h3>CBS aims to provide students with opportunities to:</h3>
-            <ul>
-                <li>Develop strong moral and ethical values.</li>
-                <li>Promote Khidmat-e-Khalq (service to humanity) and a spirit of compassion.</li>
-                <li>Encourage Amr bil Ma'ruf wa Nahi 'anil Munkar through positive and respectful means.</li>
-                <li>Develop leadership, communication, teamwork, and decision-making skills.</li>
-                <li>Support students in achieving their academic and personal goals.</li>
-                <li>Encourage active participation in community service and constructive university activities.</li>
-                <li>Build a culture of mutual respect, responsibility, discipline, and unity.</li>
-                <li>Prepare students to become responsible citizens and contribute positively to society and the nation.</li>
-            </ul>
+                <h3>CBS aims to provide students with opportunities to:</h3>
+                <ul>
+                    <li>Develop strong moral and ethical values.</li>
+                    <li>Promote Khidmat-e-Khalq (service to humanity) and a spirit of compassion.</li>
+                    <li>Encourage Amr bil Ma'ruf wa Nahi 'anil Munkar through positive and respectful means.</li>
+                    <li>Develop leadership, communication, teamwork, and decision-making skills.</li>
+                    <li>Support students in achieving their academic and personal goals.</li>
+                    <li>Encourage active participation in community service and constructive university activities.</li>
+                    <li>Build a culture of mutual respect, responsibility, discipline, and unity.</li>
+                    <li>Prepare students to become responsible citizens and contribute positively to society and the
+                        nation.</li>
+                </ul>
 
-            <p class="final">Our mission is to build not only successful students, but individuals of strong character who lead with integrity, serve humanity, and create a positive impact wherever they go.</p>
-        </div>
-    </section>
-    <!-- DOMIANS SECTION  -->
-    <section id="domains">
-    <h2>CBS Domains</h2>
-    <p class="domains-intro">Every student can participate in any domain.</p>
-
-    <div class="domain-grid">
-        <a href="domain.html?d=events" target="_blank" class="domain-card"><span class="num">01</span><span class="icon">🎪</span><h3>Events &amp; Management</h3></a>
-<a href="domain.html?d=academic" target="_blank" class="domain-card"><span class="num">02</span><span class="icon">🎓</span><h3>Academic &amp; Welfare</h3></a>
-<a href="domain.html?d=media" target="_blank" class="domain-card"><span class="num">03</span><span class="icon">📸</span><h3>Media</h3></a>
-<a href="domain.html?d=finance" target="_blank" class="domain-card"><span class="num">04</span><span class="icon">💰</span><h3>Finance</h3></a>
-<a href="domain.html?d=record" target="_blank" class="domain-card"><span class="num">05</span><span class="icon">📋</span><h3>Record</h3></a>
-<a href="domain.html?d=islamic" target="_blank" class="domain-card"><span class="num">06</span><span class="icon">🕌</span><h3>Islamic</h3></a>
-<a href="domain.html?d=volunteer" target="_blank" class="domain-card"><span class="num">07</span><span class="icon">🤝</span><h3>Volunteer Management</h3></a>
-<a href="domain.html?d=electronics" target="_blank" class="domain-card"><span class="num">08</span><span class="icon">🔌</span><h3>Inter Dept </h3></a>
-    </div>
-</section>
-<section id="cabinet">
-    <h2>OUR CABINET</h2>
-    <p class="cabinet-intro">The team behind Character Building Society</p>
-
-    <div class="year-block">
-        <span class="year-badge">2024 – 2026</span>
-        <div class="cabinet-grid">
-            <div class="member-card">
-                <div class="avatar">GS</div>
-                <h3>Dr. Ghousia Saeed</h3>
-                <p>Faculty Head</p>
+                <p class="final">Our mission is to build not only successful students, but individuals of strong
+                    character who lead with integrity, serve humanity, and create a positive impact wherever they go.
+                </p>
             </div>
-            <div class="member-card president">
-                <div class="avatar"><img src="images/mia-huzaifa.jpeg" alt="404"></div>
-                <h3>Mia Huzaifa </h3>
-                <p>President</p>
+        </section>
+        <!-- DOMIANS SECTION  -->
+        <section id="domains">
+            <h2>CBS Domains</h2>
+            <p class="domains-intro">Every student can participate in any domain.</p>
+
+            <div class="domain-grid">
+                <a href="domain.html?d=events" target="_blank" class="domain-card"><span class="num">01</span><span
+                        class="icon">🎪</span>
+                    <h3>Events &amp; Management</h3>
+                </a>
+                <a href="domain.html?d=academic" target="_blank" class="domain-card"><span class="num">02</span><span
+                        class="icon">🎓</span>
+                    <h3>Academic &amp; Welfare</h3>
+                </a>
+                <a href="domain.html?d=media" target="_blank" class="domain-card"><span class="num">03</span><span
+                        class="icon">📸</span>
+                    <h3>Media</h3>
+                </a>
+                <a href="domain.html?d=finance" target="_blank" class="domain-card"><span class="num">04</span><span
+                        class="icon">💰</span>
+                    <h3>Finance</h3>
+                </a>
+                <a href="domain.html?d=record" target="_blank" class="domain-card"><span class="num">05</span><span
+                        class="icon">📋</span>
+                    <h3>Record</h3>
+                </a>
+                <a href="domain.html?d=islamic" target="_blank" class="domain-card"><span class="num">06</span><span
+                        class="icon">🕌</span>
+                    <h3>Islamic</h3>
+                </a>
+                <a href="domain.html?d=volunteer" target="_blank" class="domain-card"><span class="num">07</span><span
+                        class="icon">🤝</span>
+                    <h3>Volunteer Management</h3>
+                </a>
+                <a href="domain.html?d=electronics" target="_blank" class="domain-card"><span class="num">08</span><span
+                        class="icon">🏛️</span>
+                    <h3>Inter Dept </h3>
+                </a>
             </div>
-            <div class="member-card">
-                <div class="avatar"><img src="images/abu-bakar-afridi.jpeg" alt="404"></div>
-                <h3>Abu Bakar Afridi</h3>
-                <p>Finance Head</p>
-            </div>
-        </div>
-    </div>
+        </section>
+        <section id="cabinet">
+            <h2>OUR CABINET</h2>
+            <p class="cabinet-intro">The team behind Character Building Society</p>
 
-    <div class="year-block">
-        <span class="year-badge">2026 – 2027</span>
-        <div class="cabinet-grid">
-            <div class="member-card">
-                <div class="avatar">?</div>
-                <h3>Dr. Ghousia Saeed</h3>
-                <p>Faculty Head</p>
-            </div>
-            <div class="member-card president">
-                <div class="avatar"><img src="images/syed-shah-jalal.jpeg" alt="404"></div>
-                <h3>Syed Shah Jalal Ahmad</h3>
-                <p>President</p>
-            </div>
-            <div class="member-card">
-                <div class="avatar"><img src="" alt=""></div>
-                <h3>Gul Wazir</h3>
-                <p>Finance Head</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Heads of Domains -->
- <section id="heads">
-    <h2>HEADS OF DOMAINS</h2>
-    <p class="heads-intro">Meet the heads representing every department</p>
-
-    <div class="table-wrap">
-        <table class="heads-table">
-            <thead>
-                <tr>
-                    <th>Department</th>
-                    <th>Head Name</th>
-                    <th>Semester</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td class="dept" rowspan="2">💻 Software Engineering</td>
-                    <td>Name Here</td>
-                    <td>Semester</td>
-                </tr>
-                <tr>
-                    <td>Name Here</td>
-                    <td>Semester</td>
-                </tr>
-            </tbody>
-
-            <tbody>
-                <tr>
-                    <td class="dept" rowspan="2">🖥️ Computer Science</td>
-                    <td>Name Here</td>
-                    <td>Semester</td>
-                </tr>
-                <tr>
-                    <td>Name Here</td>
-                    <td>Semester</td>
-                </tr>
-            </tbody>
-
-            <tbody>
-                <tr>
-                    <td class="dept" rowspan="2">📐 Architecture</td>
-                    <td> Name Here</td>
-                    <td>Semester</td>
-                </tr>
-                <tr>
-                    <td>Name Here</td>
-                    <td>Semester</td>
-                </tr>
-            </tbody>
-
-            <tbody>
-                <tr>
-                    <td class="dept" rowspan="2">⚡ Electronics</td>
-                    <td> Name Here</td>
-                    <td>Semester</td>
-                </tr>
-                <tr>
-                    <td> Name Here</td>
-                    <td> Semester</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-<section id="ideas">
-    <h2>Share Your Idea</h2>
-    <p class="ideas-intro">Have an idea for CBS? We would love to hear it.</p>
-
-    <div class="idea-box">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="hidden" name="_subject" value="New idea for CBS">
-
-            <label for="idea-name">Name</label>
-            <input type="text" name="name" id="idea-name" placeholder="Your full name" required>
-
-            <label for="idea-dept">Department</label>
-            <input type="text" name="department" id="idea-dept" placeholder="e.g. Software Engineering" required>
-
-            <div class="idea-row">
-                <div>
-                    <label for="idea-reg">Registration No</label>
-                    <input type="text" name="regno" id="idea-reg" placeholder="Your reg number" required>
-                </div>
-                <div>
-                    <label for="idea-sem">Semester</label>
-                    <input type="number" name="semester" id="idea-sem" min="1" max="8" placeholder="1 - 8" required>
+            <div class="year-block">
+                <span class="year-badge">2024 – 2026</span>
+                <div class="cabinet-grid">
+                    <div class="member-card">
+                        <div class="avatar">GS</div>
+                        <h3>Dr. Ghousia Saeed</h3>
+                        <p>Faculty Head</p>
+                    </div>
+                    <div class="member-card president">
+                        <div class="avatar"><img src="images/mia-huzaifa.jpeg" alt="404"></div>
+                        <h3>Mia Huzaifa </h3>
+                        <p>President</p>
+                    </div>
+                    <div class="member-card">
+                        <div class="avatar"><img src="images/abu-bakar-afridi.jpeg" alt="404"></div>
+                        <h3>Abu Bakar Afridi</h3>
+                        <p>Finance Head</p>
+                    </div>
                 </div>
             </div>
 
-            <label for="idea-domain">Domain</label>
-            <select name="domain" id="idea-domain" required>
-                <option value="">Select a domain</option>
-                <option>Events &amp; Management</option>
-                <option>Academic &amp; Welfare</option>
-                <option>Media</option>
-                <option>Finance</option>
-                <option>Record</option>
-                <option>Islamic</option>
-                <option>Volunteer Management</option>
-                <option>Inter Dept</option>
-            </select>
+            <div class="year-block">
+                <span class="year-badge">2026 – 2027</span>
+                <div class="cabinet-grid">
+                    <div class="member-card">
+                        <div class="avatar">?</div>
+                        <h3>Dr. Ghousia Saeed</h3>
+                        <p>Faculty Head</p>
+                    </div>
+                    <div class="member-card president">
+                        <div class="avatar"><img src="images/syed-shah-jalal.jpeg" alt="404"></div>
+                        <h3>Syed Shah Jalal Ahmad</h3>
+                        <p>President</p>
+                    </div>
+                    <div class="member-card">
+                        <div class="avatar"><img src="images/Gul-wazir-afridi.jpeg" alt="404"></div>
+                        <h3>Gul Wazir Afridi</h3>
+                        <p>Finance Head</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Heads of Domains -->
+        <section id="heads">
+            <h2>HEADS OF DOMAINS</h2>
+            <p class="heads-intro">Meet the heads representing every department</p>
 
-            <label for="idea-text">Your Idea</label>
-            <textarea name="idea" id="idea-text" placeholder="Write your idea here..." required></textarea>
+            <div class="table-wrap">
+                <table class="heads-table">
+                    <thead>
+                        <tr>
+                            <th>Department</th>
+                            <th>Head Name</th>
+                            <th>Semester</th>
+                        </tr>
+                    </thead>
 
-            <button type="submit">Submit</button>
-        </form>
+                    <tbody>
+                        <tr>
+                            <td class="dept" rowspan="2">💻 Software Engineering</td>
+                            <td>Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                        <tr>
+                            <td>Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td class="dept" rowspan="2">🖥️ Computer Science</td>
+                            <td>Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                        <tr>
+                            <td>Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td class="dept" rowspan="2">📐 Architecture</td>
+                            <td> Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                        <tr>
+                            <td>Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td class="dept" rowspan="2">⚡ Electronics</td>
+                            <td> Name Here</td>
+                            <td>Semester</td>
+                        </tr>
+                        <tr>
+                            <td> Name Here</td>
+                            <td> Semester</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="ideas">
+            <h2>Share Your Idea</h2>
+            <p class="ideas-intro">Have an idea for CBS? We would love to hear it.</p>
+
+            <div class="idea-box">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="hidden" name="_subject" value="New idea for CBS">
+
+                    <label for="idea-name">Name</label>
+                    <input type="text" name="name" id="idea-name" placeholder="Your full name" required>
+
+                    <label for="idea-dept">Department</label>
+                    <input type="text" name="department" id="idea-dept" placeholder="e.g. Software Engineering"
+                        required>
+
+                    <div class="idea-row">
+                        <div>
+                            <label for="idea-reg">Registration No</label>
+                            <input type="text" name="regno" id="idea-reg" placeholder="Your reg number" required>
+                        </div>
+                        <div>
+                            <label for="idea-sem">Semester</label>
+                            <input type="number" name="semester" id="idea-sem" min="1" max="8" placeholder="1 - 8"
+                                required>
+                        </div>
+                    </div>
+
+                    <label for="idea-domain">Domain</label>
+                    <select name="domain" id="idea-domain" required>
+                        <option value="">Select a domain</option>
+                        <option>Events &amp; Management</option>
+                        <option>Academic &amp; Welfare</option>
+                        <option>Media</option>
+                        <option>Finance</option>
+                        <option>Record</option>
+                        <option>Islamic</option>
+                        <option>Volunteer Management</option>
+                        <option>Inter Dept</option>
+                    </select>
+
+                    <label for="idea-text">Your Idea</label>
+                    <textarea name="idea" id="idea-text" placeholder="Write your idea here..." required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="activities">
+    <h2>Previous Activities</h2>
+    <p class="act-intro">A look at what CBS has done recently</p>
+
+    <div class="act-grid">
+
+        <div class="act-card">
+            <div class="act-img">
+                <img src="images/Islamic1.jpeg" alt="error404" loading="lazy">
+            </div>
+            <div class="act-body">
+                <span class="act-date">📅 Add date</span>
+                <h3>Islamic Scholars</h3>
+                <p>A session with Islamic scholars to guide students on faith, character and everyday values.</p>
+            </div>
+        </div>
+
+        <div class="act-card">
+            <div class="act-img">🌳</div>
+            <div class="act-body">
+                <span class="act-date">📅 Add date</span>
+                <h3>Plantation Drive</h3>
+                <p>Students planted trees on campus to promote a greener and cleaner environment.</p>
+            </div>
+        </div>
+
+        <div class="act-card">
+            <div class="act-img">♻️</div>
+            <div class="act-body">
+                <span class="act-date">📅 Add date</span>
+                <h3>Zero Waste Management</h3>
+                <p>An awareness and action drive to reduce waste and keep the campus clean.</p>
+            </div>
+        </div>
+
+        <div class="act-card">
+            <div class="act-img">🛡️</div>
+            <div class="act-body">
+                <span class="act-date">📅 Add date</span>
+                <h3>Anti-Fooling / Ragging Movement</h3>
+                <p>A campaign to discourage ragging and build a respectful, welcoming campus for new students.</p>
+            </div>
+        </div>
+
+        <div class="act-card">
+            <div class="act-img">
+                <img src="images/event1.jpeg" alt="404" loading="lazy">
+            </div>
+            <div class="act-body">
+                <span class="act-date">📅 Add date</span>
+                <h3>Orientation Day</h3>
+                <p>A welcome event that helped new students settle in and get to know the society.</p>
+            </div>
+        </div>
+
     </div>
 </section>
-
     </main>
 </body>
+
 </html>
