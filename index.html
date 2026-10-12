@@ -545,6 +545,7 @@
         }
 
         /* previous activities decoration  */
+      
         #activities{
     padding: 80px 20px;
     background: #fffbe6;
@@ -591,21 +592,35 @@
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 .act-img{
-    height: 180px;
+    position: relative;
+    height: 190px;
+    overflow: hidden;
     background: linear-gradient(135deg, #064e3b, #0b6b4f);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 4rem;
 }
+.act-img.has-photos{ cursor: pointer; }
 .act-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s;
 }
-.act-body{
-    padding: 22px 22px 26px;
+.act-img.has-photos:hover img{ transform: scale(1.06); }
+.photo-btn{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(6,78,59,0.92);
+    color: #ffd23f;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
 }
+.act-body{ padding: 22px 22px 26px; }
 .act-date{
     display: inline-block;
     background: #fff3b0;
@@ -625,7 +640,45 @@
     line-height: 1.6;
     font-size: 0.98rem;
 }
-    </style>
+
+/* Photo popup */
+.lightbox{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.lightbox.open{ display: flex; }
+#lb-img{
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+.lightbox button{
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.lightbox button:hover{ color: #ffd23f; }
+.lb-close{ top: 15px; right: 20px; }
+.lb-prev{ left: 10px; top: 50%; transform: translateY(-50%); }
+.lb-next{ right: 10px; top: 50%; transform: translateY(-50%); }
+#lb-count{
+    position: absolute;
+    bottom: 25px;
+    color: #ffd23f;
+    font-weight: bold;
+}
+</style>
+/* script here  */
+    
 </head>
 
 <body>
@@ -673,34 +726,42 @@
                 <a href="domain.html?d=events" target="_blank" class="domain-card"><span class="num">01</span><span
                         class="icon">🎪</span>
                     <h3>Events &amp; Management</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=academic" target="_blank" class="domain-card"><span class="num">02</span><span
                         class="icon">🎓</span>
                     <h3>Academic &amp; Welfare</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=media" target="_blank" class="domain-card"><span class="num">03</span><span
                         class="icon">📸</span>
                     <h3>Media</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=finance" target="_blank" class="domain-card"><span class="num">04</span><span
                         class="icon">💰</span>
                     <h3>Finance</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=record" target="_blank" class="domain-card"><span class="num">05</span><span
                         class="icon">📋</span>
                     <h3>Record</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=islamic" target="_blank" class="domain-card"><span class="num">06</span><span
                         class="icon">🕌</span>
                     <h3>Islamic</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=volunteer" target="_blank" class="domain-card"><span class="num">07</span><span
                         class="icon">🤝</span>
                     <h3>Volunteer Management</h3>
+                    <p>Click here for more..</p>
                 </a>
                 <a href="domain.html?d=electronics" target="_blank" class="domain-card"><span class="num">08</span><span
                         class="icon">🏛️</span>
                     <h3>Inter Dept </h3>
+                    <p>Click here for more..</p>
                 </a>
             </div>
         </section>
@@ -862,17 +923,22 @@
                 </form>
             </div>
         </section>
-
-        <section id="activities">
+<section id="activities">
     <h2>Previous Activities</h2>
     <p class="act-intro">A look at what CBS has done recently</p>
-
+    
     <div class="act-grid">
+        <div class="act-card">
+            <div class="act-img" data-folder="images/youth-club" data-files="youth.jpeg">🤝</div>
+            <div class="act-body">
+                <span class="act-date">📅 Add date</span>
+                <h3>Youth Club</h3>
+                <p>A space for students to connect, build skills and take part in positive activities together.</p>
+            </div>
+        </div>
 
         <div class="act-card">
-            <div class="act-img">
-                <img src="images/Islamic1.jpeg" alt="error404" loading="lazy">
-            </div>
+            <div class="act-img" data-folder="images/islamic-events" data-files="Islamicp1.jpeg,IS-certificatejpeg.jpeg,islamic.jpeg,Islami4.jpeg,">🕌</div>
             <div class="act-body">
                 <span class="act-date">📅 Add date</span>
                 <h3>Islamic Scholars</h3>
@@ -908,9 +974,7 @@
         </div>
 
         <div class="act-card">
-            <div class="act-img">
-                <img src="images/event1.jpeg" alt="404" loading="lazy">
-            </div>
+            <div class="act-img" data-folder="images/orientation" data-files="event.jpeg,event3.jpeg,event2.jpeg,event1.jpeg">🎉</div>
             <div class="act-body">
                 <span class="act-date">📅 Add date</span>
                 <h3>Orientation Day</h3>
@@ -918,9 +982,100 @@
             </div>
         </div>
 
+
     </div>
 </section>
+
     </main>
+    
+<div id="lightbox" class="lightbox">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" aria-label="Previous">❮</button>
+    <img id="lb-img" src="" alt="Event photo">
+    <button class="lb-next" aria-label="Next">❯</button>
+    <p id="lb-count"></p>
+</div>
+<script>
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lb-img");
+    const lbCount = document.getElementById("lb-count");
+    let photos = [];
+    let index = 0;
+
+    function showPhoto(){
+        lbImg.src = photos[index];
+        lbCount.textContent = (index + 1) + " / " + photos.length;
+    }
+    function nextPhoto(){ index = (index + 1) % photos.length; showPhoto(); }
+    function prevPhoto(){ index = (index - 1 + photos.length) % photos.length; showPhoto(); }
+    function closeBox(){ lb.classList.remove("open"); }
+
+    document.querySelectorAll(".act-img[data-files]").forEach(function(box){
+        const folder = box.dataset.folder.replace(/\/$/, "");
+        const names = box.dataset.files.split(",")
+            .map(function(f){ return f.trim(); })
+            .filter(function(f){ return f !== ""; });
+        const title = box.closest(".act-card").querySelector("h3").textContent;
+
+        // har photo check hoti hai, jo nahi milti usay chhor deta hai
+        Promise.all(names.map(function(name){
+            return new Promise(function(resolve){
+                const path = encodeURI(folder + "/" + name);
+                const im = new Image();
+                im.onload = function(){ resolve(path); };
+                im.onerror = function(){
+                    console.warn("Photo not found: " + path);
+                    resolve(null);
+                };
+                im.src = path;
+            });
+        })).then(function(results){
+            const list = results.filter(Boolean);
+            if(list.length === 0) return;
+
+            const cover = new Image();
+            cover.src = list[0];
+            cover.alt = title;
+            box.textContent = "";
+            box.appendChild(cover);
+
+            const btn = document.createElement("span");
+            btn.className = "photo-btn";
+            btn.textContent = "📷 View Photos (" + list.length + ")";
+            box.appendChild(btn);
+            box.classList.add("has-photos");
+
+            box.addEventListener("click", function(){
+                photos = list;
+                index = 0;
+                showPhoto();
+                lb.classList.add("open");
+            });
+        });
+    });
+
+    document.querySelector(".lb-next").addEventListener("click", nextPhoto);
+    document.querySelector(".lb-prev").addEventListener("click", prevPhoto);
+    document.querySelector(".lb-close").addEventListener("click", closeBox);
+    lb.addEventListener("click", function(e){ if(e.target === lb) closeBox(); });
+
+    document.addEventListener("keydown", function(e){
+        if(!lb.classList.contains("open")) return;
+        if(e.key === "Escape") closeBox();
+        if(e.key === "ArrowRight") nextPhoto();
+        if(e.key === "ArrowLeft") prevPhoto();
+    });
+
+    // mobile par swipe
+    let startX = 0;
+    lb.addEventListener("touchstart", function(e){ startX = e.touches[0].clientX; });
+    lb.addEventListener("touchend", function(e){
+        const diff = e.changedTouches[0].clientX - startX;
+        if(Math.abs(diff) > 50){ diff < 0 ? nextPhoto() : prevPhoto(); }
+    });
+    
+</script>
+
 </body>
 
 </html>
